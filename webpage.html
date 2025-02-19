@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Success</title>
+        <script>
+            window.onload = function() {
+                var gameStatus = localStorage.getItem("gameStatus");
+                if (gameStatus !== "won") {
+                    window.location.href = "start.html"; // Redirect if accessed manually
+                }
+            };
+
+            function restartGame() {
+                localStorage.removeItem("gameStatus"); // Reset game state
+                window.location.href = "start.html"; // Redirect to start page
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Congratulations!</h1>
+        <p>You stopped the shutdown!</p>
+        <button onclick="restartGame()">Restart</button>
+    </body>
+</html>

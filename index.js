@@ -10,7 +10,9 @@ function updateTimer() {
     if (timeLeft <= 0) {
         clearInterval(timerInterval);
         alert("Game Over! Time's up.");
-        document.getElementById("pass1").disabled = true; // Lock input
+        localStorage.setItem("gameStatus", "lost");
+        window.location.href = "gameover.html";
+        //document.getElementById("pass1").disabled = true; // Lock input
     }
     timeLeft--;
 }
@@ -20,11 +22,11 @@ function passcheck() {
     
     if (inputPassword !== password) {
         alert("Wrong Password, Try Again.");
-        return false; // Prevents form submission
+        return false;
     } else {
         clearInterval(timerInterval);
-        localStorage.setItem("gameStatus", "won"); // Store win state properly
-        window.location.href = "webpage.html"; // Redirect to success page
-        return false; // Prevents default form action
+        localStorage.setItem("gameStatus", "won");
+        window.location.href = "webpage.html";
+        return false;
     }
 }

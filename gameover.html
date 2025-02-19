@@ -5,7 +5,7 @@
         <script>
             window.onload = function() {
                 var gameStatus = localStorage.getItem("gameStatus");
-                if (gameStatus !== "won") {
+                if (gameStatus !== "lost") {
                     window.location.href = "start.html";
                 }
             };
@@ -17,8 +17,8 @@
         </script>
     </head>
     <body>
-        <h1>Congratulations!</h1>
-        <p>You stopped the shutdown!</p>
+        <h1>Uh oh!</h1>
+        <p>Better Luck Next Time...</p>
         <button onclick="restartGame()">Restart</button>
     </body>
 </html>

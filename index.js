@@ -1,4 +1,4 @@
-var password = "12345";
+var password = "UCF";
 var timeLeft = 1500; // 25 minutes in seconds
 var timerInterval = setInterval(updateTimer, 1000);
 

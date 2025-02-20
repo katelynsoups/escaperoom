@@ -19,8 +19,9 @@ function updateTimer() {
 
 function passcheck() {
     var inputPassword = document.getElementById("pass1").value;
-    
-    if (inputPassword !== password) {
+    var caps = inputPassword.toUpperCase();
+
+    if (caps !== password) {
         alert("Wrong Password, Try Again.");
         return false;
     } else {
